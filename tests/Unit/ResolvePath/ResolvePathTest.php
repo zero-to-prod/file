@@ -13,7 +13,7 @@ class ResolvePathTest extends TestCase
             'filename' => 'test.txt',
         ]);
 
-        self::assertEquals('./test.txt', $BaseClass->path);
+        self::assertEquals('./test.txt', $BaseClass->path());
     }
 
     #[Test] public function sets_path(): void
@@ -23,6 +23,6 @@ class ResolvePathTest extends TestCase
             'directory' => '/app'
         ]);
 
-        self::assertEquals('/app/test.txt', $BaseClass->path);
+        self::assertEquals('/app/test.txt', $BaseClass->path());
     }
 }

@@ -22,29 +22,13 @@ trait File
     public string $directory;
 
     /**
-     * The full path of the file including the directory path and filename.
-     */
-    #[Describe(['cast' => [self::class, 'resolvePath']])]
-    public string $path;
-
-    /**
-     * Resolves the file path from the filename and directory.
+     *  The full path of the file including the directory path and filename.
      */
     public function path(): string
     {
         return rtrim($this->directory ?? '.', DIRECTORY_SEPARATOR)
             .DIRECTORY_SEPARATOR
             .$this->filename;
-    }
-
-    /**
-     * Resolves the file path from the filename and directory.
-     */
-    private static function resolvePath($value, array $context): string
-    {
-        return rtrim($context['directory'] ?? '.', DIRECTORY_SEPARATOR)
-            .DIRECTORY_SEPARATOR
-            .$context['filename'];
     }
 
     /**
@@ -99,8 +83,7 @@ trait File
         bool $overwrite = false
     ): string {
         if (!$overwrite && $this->fileExists()) {
-            $path = $this->path ?? $this->path();
-            throw new RuntimeException("File already exists: $path");
+            throw new RuntimeException("File already exists: {$this->path()}");
         }
 
         $this->initDirRecursively($permissions);
@@ -126,7 +109,7 @@ trait File
      */
     public function fileExists(): bool
     {
-        return file_exists($this->path ?? $this->path());
+        return file_exists($this->path());
     }
 
     /**
@@ -184,7 +167,7 @@ trait File
         $context = null
     ): int|false {
         return file_put_contents(
-            $this->path ?? $this->path(),
+            $this->path(),
             $data,
             $flags,
             $context
