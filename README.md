@@ -9,6 +9,14 @@
 
 File helper methods.
 
+## Installation
+
+You can install the package via Composer:
+
+```bash
+composer require zero-to-prod/file
+```
+
 ## Testing
 
 ```shell
