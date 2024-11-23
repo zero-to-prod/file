@@ -13,7 +13,7 @@ trait File
      * User.php
      * ```
      */
-    #[Describe(['required' => true])]
+    #[Describe(['required'])]
     public string $filename;
 
     /**
