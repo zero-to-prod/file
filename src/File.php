@@ -8,9 +8,12 @@ use Zerotoprod\DataModel\Describe;
 trait File
 {
     /**
-     * The filename of the file.
+     * The filename of the file including the extension:
+     * ```
+     * User.php
+     * ```
      */
-    #[Describe(['required' => true])]
+    #[Describe(['required'])]
     public string $filename;
 
     /**
