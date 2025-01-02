@@ -6,6 +6,7 @@
 [![php](https://img.shields.io/packagist/php-v/zero-to-prod/file.svg?color=purple)](https://packagist.org/packages/zero-to-prod/file/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/file?color=f28d1a)](https://packagist.org/packages/zero-to-prod/file)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/file?color=pink)](https://github.com/zero-to-prod/file/blob/main/LICENSE.md)
+[![wakatime](https://wakatime.com/badge/github/zero-to-prod/file.svg)](https://wakatime.com/badge/github/zero-to-prod/file)
 
 File helper methods.
 
