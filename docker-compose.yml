@@ -64,3 +64,25 @@ services:
       target: composer
     volumes:
       - ./:/app
+
+  php84:
+    build:
+      context: docker/php84
+      target: base
+    volumes:
+      - ./:/app
+
+  php84debug:
+    build:
+      context: docker/php84
+      target: debug
+    volumes:
+      - ./:/app
+      - ./docker/php82:/usr/local/etc/php
+
+  php84composer:
+    build:
+      context: docker/php84
+      target: composer
+    volumes:
+      - ./:/app
