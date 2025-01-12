@@ -1,7 +1,7 @@
 {
   "type": "library",
   "name": "zero-to-prod/file",
-  "description": "File helpers",
+  "description": "A DataModel representing a file.",
   "keywords": [
     "zero-to-prod",
     "File"
