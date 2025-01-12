@@ -23,7 +23,7 @@
 
 ## Introduction
 
-File helper methods.
+A DataModel representing a file.
 
 ## Requirements
 
