@@ -14,8 +14,6 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
-    - [Nested Objects](#nested-objects)
 - [Local Development](#local-development)
     - [Prerequisites](#prerequisites)
     - [Initializing](#initializing)
