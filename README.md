@@ -41,7 +41,7 @@ This will add the package to your project’s dependencies and create an autoloa
 You can directly import these files into your project like this:
 
 ```shell
-./vendor/bin/file app/DataModels
+./vendor/bin/file app/File
 ```
 
 The first argument is the destination of where the files are copied to.
