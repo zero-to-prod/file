@@ -14,6 +14,7 @@
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Publishing DataModels](#publishing-datamodels)
 - [Local Development](./LOCAL_DEVELOPMENT.md)
 - [Contributing](#contributing)
 
@@ -34,6 +35,16 @@ composer require zero-to-prod/file
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
+
+## Publishing DataModels
+
+You can directly import these files into your project like this:
+
+```shell
+./vendor/bin/file app/DataModels
+```
+
+The first argument is the destination of where the files are copied to.
 
 ## Contributing
 
