@@ -5,6 +5,11 @@ namespace Zerotoprod\File;
 use RuntimeException;
 use Zerotoprod\DataModel\Describe;
 
+/**
+ * A DataModel representing a file.
+ *
+ * @link https://github.com/zero-to-prod/file
+ */
 trait File
 {
     /**
@@ -12,6 +17,8 @@ trait File
      * ```
      * User.php
      * ```
+     *
+     * @link https://github.com/zero-to-prod/file
      */
     #[Describe(['required'])]
     public string $filename;
@@ -20,12 +27,16 @@ trait File
      * The directory of the file.
      *
      * Defaults to `.`
+     *
+     * @link https://github.com/zero-to-prod/file
      */
     #[Describe(['default' => '.'])]
     public string $directory;
 
     /**
      *  The full path of the file including the directory path and filename.
+     *
+     * @link https://github.com/zero-to-prod/file
      */
     public function path(): string
     {
@@ -56,6 +67,7 @@ trait File
      *
      * If options is used, this function will return a
      * string if not all elements are requested.
+     * @link https://github.com/zero-to-prod/file
      */
     public function pathinfo(int $flags = PATHINFO_ALL): false|int|string|array
     {
@@ -67,6 +79,7 @@ trait File
      *
      * @link https://www.php.net/manual/en/function.pathinfo.php
      * @see  https://www.php.net/manual/en/filesystem.constants.php#constant.pathinfo-filename
+     * @link https://github.com/zero-to-prod/file
      */
     public function filename(): array|string
     {
@@ -79,6 +92,7 @@ trait File
      * It will initialize the directory if it does not exist.
      *
      * @throws RuntimeException When overwriting a file unintentionally.
+     * @link https://github.com/zero-to-prod/file
      */
     public function put(
         mixed $data = '',
@@ -109,6 +123,7 @@ trait File
      *
      * @link https://www.php.net/manual/en/function.file-exists.php
      * @see  https://www.php.net/manual/en/errorfunc.constants.php#constant.e-warning
+     * @link https://github.com/zero-to-prod/file
      */
     public function fileExists(): bool
     {
@@ -163,6 +178,7 @@ trait File
      * @see  https://www.php.net/manual/en/function.fopen.php
      * @see  https://www.php.net/manual/en/function.fwrite.php
      * @see  https://www.php.net/manual/en/function.fclose.php
+     * @link https://github.com/zero-to-prod/file
      */
     public function filePutContents(
         mixed $data,
@@ -179,6 +195,8 @@ trait File
 
     /**
      * Creates directories recursively if they do not exist for the file.
+     *
+     * @link https://github.com/zero-to-prod/file
      */
     public function initDir(
         int $permissions = 0777,
@@ -195,6 +213,8 @@ trait File
 
     /**
      * Creates directories recursively if they do not exist for the file.
+     *
+     * @link https://github.com/zero-to-prod/file
      */
     public function initDirRecursively(int $permissions = 0777): bool
     {
